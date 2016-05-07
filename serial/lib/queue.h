@@ -41,7 +41,7 @@ Node* pop(Queue* queue);
  * Print every element of queue, from head to tail
  * Separated by a single space
  *************************************************/
-long long printq(Queue* queue);
+void printq(Queue* queue);
 
 unsigned int isEmpty(Queue* queue);
 #endif

@@ -67,7 +67,7 @@ Edge* pop_back(List* list) {
  * Print every element of list, from head to tail
  * Separated by a single space
  *************************************************/
-long long printList(List* list) {
+void printList(List* list) {
   printf("The size of list is %lld, the list contains (from head to tail):\n", list->size);
   Edge* p = list->head;
   while(p) {
@@ -82,7 +82,7 @@ unsigned int isListEmpty(List* list) {
 }
 
 /***************************
- * Erase the entire the list
+ * Erase the entire list
  ***************************/
 void freeList(List* list) {
   Edge* p = list->head;

@@ -1,16 +1,16 @@
 IDIR =../lib
 CC=gcc
-CFLAGS=-I$(IDIR)
+CFLAGS=-I$(IDIR) -Wall -Werror
 
 ODIR=../lib
 LDIR =../lib
 
 LIBS=-lm
 
-_DEPS = queue.h list.h
+_DEPS = queue.h list.h graph.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = test.o queue.o list.o
+_OBJ = test.o queue.o list.o graph.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 
@@ -23,4 +23,4 @@ test: $(OBJ)
 .PHONY: clean
 
 clean:
-		rm -f ./*.o $(ODIR)/*.o *~ core $(INCDIR)/*~  test ../lib/test.o ../lib/queue.o ../lib/list.o
+		rm -f ./*.o $(ODIR)/*.o *~ core $(INCDIR)/*~  test ../lib/test.o ../lib/queue.o ../lib/list.o ../lib/graph.o

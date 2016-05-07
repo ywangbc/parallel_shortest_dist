@@ -63,7 +63,7 @@ Node* pop(Queue* queue) {
  * Print every element of queue, from head to tail
  * Separated by a single space
  *************************************************/
-long long printq(Queue* queue) {
+void printq(Queue* queue) {
   printf("The size of queue is %lld, the queue contains (from head to tail):\n", queue->size);
   Node* p = queue->head;
   while(p) {

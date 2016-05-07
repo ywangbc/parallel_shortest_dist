@@ -1,5 +1,6 @@
 #include "../lib/queue.h"
 #include "../lib/list.h"
+#include "../lib/graph.h"
 
 
 int main() {
@@ -49,4 +50,15 @@ int main() {
   freeList(list);
   printList(list);
   assert(isListEmpty(list));
+
+  List* edgelist;
+  long long vNum;
+  long long eNum;
+  edgelist = readGraph("input.txt", &vNum, &eNum);
+
+  for(i=1; i<=vNum; i++) {
+    printList(&edgelist[i]);
+  }
+
+  return 0;
 }

@@ -44,7 +44,18 @@ Edge* pop_back(List* queue);
  * Print every element of queue, from head to tail
  * Separated by a single space
  *************************************************/
-long long printList(List* list);
+void printList(List* list);
 
+/*****************************
+ * @return
+ *   true if the list is empty
+ *   false otherwise
+ ****************************/
 unsigned int isListEmpty(List* list);
+
+/***************************
+ * Erase the entire the list
+ ***************************/
+void freeList(List* list);
+
 #endif
