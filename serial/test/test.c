@@ -52,13 +52,21 @@ int main() {
   assert(isListEmpty(list));
 
   List* edgelist;
+  long long* sourcelist;
+
   long long vNum;
   long long eNum;
+  long long sourcenum;
   edgelist = readGraph("input.txt", &vNum, &eNum);
-
-  for(i=1; i<=vNum; i++) {
-    printList(&edgelist[i]);
+  printGraph(edgelist, vNum, eNum);
+  sourcelist=readSource("input2.txt", &sourcenum);
+  printSource(sourcelist, sourcenum);
+  long long *dist;
+  Queue* queue = newq();
+  dist=moore_dist(edgelist, queue, vNum, eNum, sourcelist[0]);
+  long long j;
+  for(j=1; j<=vNum; j++) {
+    printf("dist from %lld to %lld is: %lld\n", sourcelist[0], j, dist[j]);
   }
-
   return 0;
 }
